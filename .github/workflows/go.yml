@@ -24,7 +24,7 @@ jobs:
 
     - name: Get dependencies
       run: |
-        make dep && make install-lint
+        make dep && make install-lint && echo $PATH
 
     - name: Test
       run: make test
