@@ -30,7 +30,9 @@ jobs:
       run: make test
 
     - name: Lint
-      run: echo $PATH && make lint || true
+      uses: actions-contrib/golangci-lint@v1
+      with:
+        args: -E goimports -E misspell -E whitespace -E goprintffuncname -E godox
 
     - name: Build
       run: make build
