@@ -32,7 +32,7 @@ jobs:
     - name: Lint
       uses: actions-contrib/golangci-lint@v1
       with:
-        args: -E goimports -E misspell -E whitespace -E goprintffuncname -E godox
+        args: run -E goimports -E misspell -E whitespace -E goprintffuncname -E godox
 
     - name: Build
       run: make build
