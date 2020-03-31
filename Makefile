@@ -14,6 +14,9 @@ lint: ## Lint the files
 test: ## Run unittests
 	@go test -v
 
+dep:
+	@go get
+
 build: dep ## Build the binary file
 	@go build -i -v $(PKG)
 

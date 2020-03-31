@@ -24,7 +24,7 @@ jobs:
 
     - name: Get dependencies
       run: |
-        go get -v -t -d ./... && make install-lint
+        make dep && make install-lint
 
     - name: Test
       run: make test
